@@ -1,3 +1,41 @@
+@charset "UTF-8";
+
+:root {
+  /* Paleta */
+  --color-gray-100: #E6E6E6;
+  --color-gray-700: #4D4D4D;
+  --color-orange: #FF6600;
+  --color-white: #FFFFFF;
+
+  /* Tokens de uso */
+  --color-bg-site: var(--color-white);
+  --color-bg-block-image: var(--color-gray-100);
+  --color-bg-block-content: var(--color-white);
+  --color-bg-block-text-only: var(--color-gray-100);
+  --color-bg-insurence: var(--color-gray-100);
+  --color-bg-speak-counters: var(--color-gray-700);
+  --color-bg-footer: var(--color-orange);
+  --color-bg-title: var(--color-orange);
+  --color-bg-btn: var(--color-gray-700);
+  --color-bg-btn-hover: var(--color-orange);
+  
+  --color-title: var(--color-white);
+  --color-subtitle: var(--color-gray-700);
+  --color-text-footer: var(--color-white);
+  --color-text-link: var(--color-white);
+
+  --font: "Roboto Slab", Georgia, "Times New Roman", serif;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--font);
+  margin: 0;
+  padding: 0;
+}
+
+
+
 /* Breakpoints:
   ex:375px
   sm: 576px
