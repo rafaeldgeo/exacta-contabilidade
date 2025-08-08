@@ -91,13 +91,18 @@
       <main class="main">
         <section class="block-image-content">
           <div class="block-image-content__image">
-            <img
+            <picture>
+              <source srcset="https://placehold.co/720x496" media="(min-width: 376px)">
+              <!-- <source srcset="https://placehold.co/704x485" media="(min-width: 768px)"> -->
+              <img  class="block-image-content__photo" src="https://placehold.co/375x485" alt="Profissional analisando relatório impresso sobre mesa de escritório durante reunião por videoconferência.">          
+            </picture>
+            <!-- <img
               class="block-image-content__photo"
               src="https://placehold.co/720x496"
               alt="Profissional analisando relatório impresso sobre mesa de escritório durante reunião por videoconferência."
               width="720"
               height="496"
-            />
+            /> -->
           </div>
           <div class="block-image-content__content">
             <div class="block-image-content__header">
@@ -195,9 +200,7 @@
               </div>
               <div class="card-service__body">
                 <ul class="card-service__list-services">
-                  <li class="card-service__type">
-                    <abbr title="Micro Empreendedor Individual">MEI</abbr>
-                  </li>
+                  <li class="card-service__type"><abbr title="Micro Empreendedor Individual">MEI</abbr></li>
                   <li class="card-service__type">Simples Nacional</li>
                   <li class="card-service__type">Lucro presumido</li>
                   <li class="card-service__type">Lucro real</li>
@@ -269,30 +272,18 @@
               </div>
               <div class="card-service__body">
                 <ul class="card-service__list-services">
-                  <li class="card-service__type">
-                    <abbr
-                      title="Fundo de Desenvolvimento das Atividades Portuárias"
-                      >FUNDAP-ES</abbr
-                    >
-                  </li>
+                  <li class="card-service__type"><abbr title="Fundo de Desenvolvimento das Atividades Portuárias">FUNDAP-ES</abbr></li>
                   <li class="card-service__type">Compete-ES Atacadista</li>
                   <li class="card-service__type">Compete-ES E-commerce</li>
                   <li class="card-service__type">Regime Especial de Alagoas</li>
-                  <li class="card-service__type">
-                    <abbr
-                      title="Regime de Tributação Logística do Estado do Rio de Janeiro"
-                      >RIOLOG</abbr
-                    >
-                  </li>
+                  <li class="card-service__type"><abbr title="Regime de Tributação Logística do Estado do Rio de Janeiro">RIOLOG</abbr></li>
                 </ul>
               </div>
             </article>
           </div>
         </section>
         <section class="block-image-content block-image-content--reverse">
-          <div
-            class="block-image-content__image block-image-content__image--reverse"
-          >
+          <div class="block-image-content__image block-image-content__image--reverse">
             <img
               class="block-image-content__photo"
               src="https://placehold.co/720x496"
@@ -302,9 +293,7 @@
               loading="lazy"
             />
           </div>
-          <div
-            class="block-image-content__content block-image-content__content--reverse"
-          >
+          <div class="block-image-content__content block-image-content__content--reverse">
             <div class="block-image-content__header">
               <h2 class="block-image-content__title">Comércio exterior</h2>
             </div>
@@ -321,13 +310,9 @@
                   tributária </strong
                 >, explorando os incentivos fiscais exclusivos do estado do
                 Espírito Santo, como o FUNDAP — que proporciona financiamento
-                vantajoso do
-                <abbr title="Imposto sobre Circulação de Mercadorias e Serviços"
-                  >ICMS</abbr
-                >
-                e redução significativa de custos — e o COMPETE-ES, que permite
-                redução expressiva da carga tributária em operações
-                interestaduais e exportações.
+                vantajoso do <abbr title="Imposto sobre Circulação de Mercadorias e Serviços">ICMS</abbr> e redução significativa de custos — e o
+                COMPETE-ES, que permite redução expressiva da carga tributária
+                em operações interestaduais e exportações.
               </p>
             </div>
           </div>
@@ -484,8 +469,7 @@
           </p>
         </div>
       </footer>
-      <!-- MODAL -->
-      <!-- <div
+      <div
         class="modal"
         aria-hidden="true"
         role="dialog"
@@ -556,7 +540,7 @@
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
     </div>
   </body>
 </html>
