@@ -4,25 +4,24 @@
   /* Paleta */
   --color-gray-100: #e6e6e6;
   --color-gray-700: #4d4d4d;
-  --color-orange: #ff6600;
+  --color-orange-100: #fddec2;
+  --color-orange-700: #ff6600;
   --color-white: #ffffff;
 
   /* Tokens de uso */
   --color-bg: var(--color-white);
-  --color-bg-block-image-content--imagem: var(--color-gray-100);
+  --color-bg-block-image-content--imagem: var(--color-orange-100);
   --color-bg-block-image-content--content: var(--color-white);
   --color-bg-block-text-only: var(--color-gray-100);
   --color-bg-insurence: var(--color-gray-100);
   --color-bg-speak-counters: var(--color-gray-700);
-  --color-bg-footer: var(--color-orange);
-  --color-bg-title: var(--color-orange);
+  --color-bg-footer: var(--color-orange-700);
+  --color-bg-title: var(--color-orange-700);
   --color-bg-btn: var(--color-gray-700);
-  --color-bg-btn-hover: var(--color-orange);
+  --color-bg-btn-hover: var(--color-orange-700);
 
-  --color-title: var(--color-white);
-  --color-subtitle: var(--color-gray-700);
-  --color-text-footer: var(--color-white);
-  --color-text-link: var(--color-white);
+  --color-tx-dark: var(--color-gray-700);
+  --color-tx-light: var(--color-white);
 
   --font: "Roboto Slab", Georgia, "Times New Roman", serif;
 }
@@ -67,55 +66,162 @@ body {
 .header {
   align-items: center;
   display: flex;
-  grid-column: 1 / -1;
   justify-content: space-between;
 }
 
 .main {
-  grid-column: 1 / -1;
 }
 
 .block-image-content {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto;
+  grid-template-columns: 1fr;
 }
 
 .block-image-content__image {
-  grid-column: 1 / -7;
+  background-color: var(--color-bg-block-image-content--imagem);
 }
 
 .block-image-content__content {
-  grid-column: 7 / -2;
+  color: var(--color-tx-dark);
+  background-color: var(--color-bg-block-image-content--content);
+}
+
+.block-image-content__header {
+  background-color: var(--color-bg-title);
+}
+
+.block-image-content__title {
+  color: var(--color-tx-light);
+}
+
+.block-image-content__body {
+  background-color: var(--color-bg-block-image-content--content);
+}
+
+.block-image-content__text {
+  color: var(--color-tx-dark);
 }
 
 .block-text-only {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto;
 }
 
 .block-text-only__header {
-  grid-column: 2 / -10;
+  background-color: var(--color-bg-title);
+}
+
+.block-text-only__title {
+  color: var(--color-tx-light);
 }
 
 .block-text-only__body {
-  grid-column: 4 / -2;
+  background-color: var(--color-bg-block-text-only);
+  color: var(--color-tx-dark);
+}
+
+.insurence {
+  background-color: var(--color-bg-insurence);
+  color: var(--color-tx-dark);
+}
+
+.speak-counters {
+  background-color: var(--color-bg-speak-counters);
+  color: var(--color-tx-light);
+}
+
+.footer {
+  background-color: var(--color-bg-footer);
+}
+
+
+
+
+
+
+.contact-us {
+  color: var(--color-tx-light);
+}
+
+.company {
+  color: var(--color-tx-light);
+}
+
+.credits {
+  color: var(--color-tx-light);
 }
 
 @media screen and (min-width: 575.98px) {
   .container {
     grid-template-columns: repeat(12, 1fr);
-    background-color: red;
+    grid-template-rows: auto;
   }
 
   .header {
     grid-column: 2 / -2;
   }
+
+  .main {
+    grid-column: 1 / -1;
+  }
+
+  .block-image-content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .block-image-content__image {
+    display: block;
+  }
+
+  .block-text-only {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-row: 1;
+  }
+
+  .footer {
+    grid-column: 1 / -1;
+  }
 }
 
-.footer {
-  grid-column: 1 / -1;
+@media screen and (min-width: 768.98px) {
+  .container {
+  }
+
+  .block-image-content__image {
+    grid-column: 1 / -7;
+    grid-row: 1;
+  }
+
+  .block-image-content__content {
+    grid-column: 7 / -1;
+    grid-row: 1;
+  }
+
+  .block-image-content__image--reverse {
+    grid-column: 7 / -2;
+  }
+
+  .block-image-content__content--reverse {
+    grid-column: 1 / -7;
+  }
+
+  .block-text-only__header {
+    grid-column: 2 / -10;
+    grid-row: 1;
+  }
+
+  .block-text-only__body {
+    grid-column: 4 / -1;
+    grid-row: 1;
+  }
+
+  .block-text-only__header--reverse {
+    grid-column: 10 / -2;
+  }
+
+  .block-text-only__body--reverse {
+    grid-column: 1 / -4;
+  }
 }
 
 /* Breakpoints:
