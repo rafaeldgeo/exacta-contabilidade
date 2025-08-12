@@ -63,10 +63,25 @@ body {
   max-inline-size: 90rem;
 }
 
+img {
+  block-size: auto;
+  display: block;
+  max-inline-size: 100%;
+}
+
 .header {
   align-items: center;
   display: flex;
   justify-content: space-between;
+  padding-block: clamp(2.25rem, 4.45vw, 4.5rem);
+}
+
+.logo__img {
+  inline-size: clamp(10.063rem, 29.297vw, 22.625rem);
+}
+
+.slogan__img {
+  inline-size: clamp(4.8125rem, 18.23vw, 11.75rem);
 }
 
 .main {
@@ -86,12 +101,10 @@ body {
   background-color: var(--color-bg-block-image-content--content);
 }
 
-.block-image-content__header {
-  background-color: var(--color-bg-title);
-}
-
 .block-image-content__title {
+  background-color: var(--color-bg-title);
   color: var(--color-tx-light);
+  font-weight: 400;
 }
 
 .block-image-content__body {
@@ -100,6 +113,7 @@ body {
 
 .block-image-content__text {
   color: var(--color-tx-dark);
+  font-weight: 400;
 }
 
 .block-text-only {
@@ -131,11 +145,6 @@ body {
 .footer {
   background-color: var(--color-bg-footer);
 }
-
-
-
-
-
 
 .contact-us {
   color: var(--color-tx-light);
@@ -172,6 +181,11 @@ body {
     display: block;
   }
 
+  .block-image-content__title {
+    padding-block: 1.375rem;
+    font-size: 2.25rem;
+  }
+
   .block-text-only {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -198,11 +212,37 @@ body {
   }
 
   .block-image-content__image--reverse {
-    grid-column: 7 / -2;
+    grid-column: 7 / -1;
   }
 
   .block-image-content__content--reverse {
     grid-column: 1 / -7;
+  }
+
+  .block-image-content__body {
+    padding-block: 40px;
+  }
+
+  .block-image-content__title {
+    padding-inline-start: 60px;
+    padding-block: 22px;
+    font-size: 36px;
+    /* padding-inline-start: clamp(1.85rem, 2.09vw, 7.5rem);
+    padding-block: clamp(0.875rem, 0.98vw, 1.375rem);
+    font-size: clamp(1.625rem, 2.5vw, 2.25rem); */
+  }
+
+  .block-image-content__text {
+    margin-block-end: 32px;
+    font-size: 18px;
+    line-height: 1.8;
+    inline-size: 100%;
+    max-inline-size: 600px;
+    padding-inline-start: 60px;
+  }
+
+  .block-image-content__text:last-child {
+    margin-block-end: 0;
   }
 
   .block-text-only__header {
