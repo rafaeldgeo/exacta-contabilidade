@@ -132,12 +132,12 @@ body {
   line-height: 1;
 }
 
-.text-only__card {
+.text-only__body {
   background-color: var(--color-bg-block-text-only);
+  color: var(--color-tx-dark);
 }
 
 .card-purpose {
-  color: var(--color-tx-dark);
 }
 
 .card-purpose__title {
@@ -151,11 +151,14 @@ hr {
   height: 0.25rem;
 }
 
+.card-purpose__body {
+}
+
 .card-purpose__text {
 }
 
 .card-service {
-  color: var(--color-tx-dark);
+  flex: 0 1 auto;
 }
 
 .card-service__title {
@@ -318,34 +321,33 @@ hr {
   }
 
   .text-only__title--reverse {
-    padding-inline: clamp(1rem, 2.23vw, 2rem) 0;
     text-align: start;
+    padding-inline: clamp(1rem, 2.23vw, 2rem) 0;
   }
 
-  .text-only__card {
-    padding-block: clamp(45px, 3.52vw, 4.0625rem);
+  .text-only__body {
+    grid-column: 4 / -1;
+    grid-row: 1;
+    display: flex;
+    justify-content: space-evenly;
+    padding-block: clamp(1rem, 3.7vw, 4.0625rem);
   }
 
-  .text-only__card--mission {
-    grid-column: 4 / -7;
-    padding-inline-start: clamp(2.25rem, 3.2vw, 3.75rem);
-    justify-items: start;
+  .text-only--reverse {
+    margin-top: clamp(1.625rem, 2.23vw, 2rem);
   }
 
-  .text-only__card--vision {
-    grid-column: 7 / -4;
-    padding-inline: clamp(2.3125rem, 3.125vw, 2.815rem);
+  .text-only__header--reverse {
+    grid-column: 10 / -2;
   }
 
-  .text-only__card--values {
-    grid-column: 10 / -1;
-    padding-inline-end: clamp(2.25rem, 3.2vw, 3.75rem);
-    justify-items: end;
+  .text-only__body--reverse {
+    grid-column: 1 / -4;
+    padding-block: clamp(1rem, 5.2vw, 4.719rem);
   }
 
   .card-purpose {
-    inline-size: 100%;
-    max-inline-size: 16.875rem;
+    flex: 0 1 16.875rem;
   }
 
   .card-purpose__title {
@@ -361,38 +363,8 @@ hr {
     line-height: calc(clamp(1rem, 1.12vw, 1.125rem) * 1.5);
   }
 
-  .text-only--reverse {
-    margin-top: clamp(1.625rem, 2.23vw, 2rem);
-  }
-
-  .text-only__header--reverse {
-    grid-column: 10 / -2;
-  }
-
-  .text-only__card--companies {
-    grid-column: 1 / -11;
-  }
-
-  .text-only__card--activities {
-    grid-column: 3 / -9;
-  }
-
-  .text-only__card--management {
-    grid-column: 5 / -7;
-  }
-
-  .text-only__card--benefits {
-    grid-column: 7 / -4;
-  }
-
-  .card-service {
-    inline-size: 100%;
-    max-inline-size: max-content;
-    margin-inline-start: auto;
-  }
-
   .card-service__title {
-    font-size: clamp(1rem, 1.25vw, 1.125rem);
+    font-size: clamp(1rem, 1.25vw, 1.25rem);
     text-align: start;
   }
 
@@ -402,8 +374,8 @@ hr {
   }
 
   .card-service__list-services {
-    font-size: clamp(1rem, 1.25vw, 1rem);
-    line-height: calc(clamp(1rem, 1.25vw, 1rem) * 1.5);
+    font-size: clamp(1rem, 1.25vw, 1.125rem);
+    line-height: calc(clamp(1rem, 1.25vw, 1.125rem) * 1.5);
   }
 }
 
