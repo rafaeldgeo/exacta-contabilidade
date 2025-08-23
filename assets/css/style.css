@@ -97,6 +97,7 @@ body {
 .image-content__image {
   background-color: var(--color-bg-block-image-content--imagem);
   overflow: hidden;
+  display: block;
 }
 
 .image-content__photo {
@@ -141,7 +142,6 @@ body {
 .text-only__title {
   color: var(--color-tx-light);
   font-weight: 400;
-  line-height: 1;
 }
 
 .text-only__card {
@@ -170,6 +170,8 @@ hr {
   background-color: var(--color-orange-700);
   border: none;
   height: 0.25rem;
+  inline-size: 100%;
+  max-inline-size: 13.125rem;
 }
 
 .card-purpose__text {
@@ -349,7 +351,6 @@ hr {
 /* TABLET ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 @media screen and (min-width: 575.98px) {
-
   .container {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
@@ -360,22 +361,58 @@ hr {
   }
 
   .main {
-    grid-column: 1 / -1;
+    grid-column: 1 / 13;
   }
 
   /* component block image and content */
   .image-content {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, auto);
   }
 
   .image-content__image {
-    display: block;
+    aspect-ratio: 704 / 485;
+    grid-column: 1 / 12;
+  }
+
+  .image-content__content {
+    grid-column: 1 / 12;
+  }
+
+  .image-content__body {
+    padding-block: clamp(1.25rem, 4.17vw, 2rem); /* minimo */
+    padding-inline: clamp(2.25rem, 8.34vw, 4rem) 0; /* minimo */
+  }
+
+  .image-content__body--reverse {
+    padding-inline: 0 clamp(2.25rem, 8.34vw, 4rem); /* minimo */
   }
 
   .image-content__title {
-    padding-block: 0.625rem;
-    font-size: clamp(1.625rem, 4.69vw, 2.25rem);
+    font-size: clamp(1.625rem, 4.69vw, 2.25rem); /* minimo */
+    padding-block: clamp(0.5rem, 2.09vw, 1rem); /* minimo */
+    padding-inline: clamp(1.25rem, 4.17vw, 2rem); /* minimo */
+    text-align: end;
+  }
+
+  .image-content__title--reverse {
+    text-align: start;
+  }
+
+  .image-content__text {
+    font-size: clamp(1rem, 2.35vw, 1.125rem); /* minimo */
+    line-height: calc(clamp(1rem, 2.35vw, 1.125rem) * 1.6); /* minimo */
+    margin-block-end: clamp(1rem, 4.17vw, 2rem); /* minimo */
+    max-inline-size: 40rem;
+  }
+
+  .image-content__image--reverse {
+    grid-column: 2 / 13;
+  }
+
+  .image-content__content--reverse {
+    grid-column: 2 / 13;
   }
 
   /* component bock text only */
@@ -383,7 +420,45 @@ hr {
   .text-only {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-row: 1;
+    grid-template-rows: repeat(4, auto);
+  }
+
+  .text-only__header {
+    grid-column: 2 / 13;
+    grid-row: 1 / 2;
+  }
+
+  .text-only__title {
+    font-size: clamp(1.625rem, 4.69vw, 2.25rem); /* minimo */
+    padding-block: clamp(0.5rem, 2.09vw, 1rem); /* minimo */
+    padding-inline: clamp(1.25rem, 4.17vw, 2rem); /* minimo */
+    text-align: start;
+  }
+
+  .text-only__title--reverse {
+    text-align: end;
+  }
+
+  .text-only__card--mission,
+  .text-only__card--vision,
+  .text-only__card--values {
+    grid-column: 2 / 13;
+    padding-inline: clamp(1.25rem, 4.17vw, 2rem) clamp(2.25rem, 8.34vw, 4rem); /* minimo */
+  }
+
+  .text-only__card--mission {
+    grid-row: 2 / 3;
+    padding-block: clamp(1.25rem, 4.17vw, 2rem) 0; /* minimo */
+  }
+
+  .text-only__card--vision {
+    grid-row: 3 / 4;
+    padding-block: clamp(1.25rem, 4.17vw, 2rem); /* minimo */
+  }
+
+  .text-only__card--values {
+    grid-row: 4 / 5;
+    padding-block: 0 clamp(1.25rem, 4.17vw, 2rem); /* minimo */
   }
 
   .footer {
@@ -393,21 +468,20 @@ hr {
 
 /* DESKTOP ----------------------------------------------------------------------- */
 @media screen and (min-width: 1200.98px) {
-  
   /* component block image and content */
+
+  .image-content {
+    grid-template-rows: auto;
+  }
 
   .image-content__image {
     aspect-ratio: 720 / 452;
-    grid-column: 1 / -7;
+    grid-column: 1 / 7;
     grid-row: 1;
   }
 
-  .image-content__photo {
-    aspect-ratio: 720 / 452;
-  }
-
   .image-content__content {
-    grid-column: 7 / -1;
+    grid-column: 7 / 13;
     grid-row: 1;
   }
 
@@ -420,6 +494,7 @@ hr {
     font-size: clamp(1.75rem, 2.5vw, 2.25rem);
     padding-block: clamp(0.5rem, 1.11vw, 1rem);
     padding-inline: clamp(2.25rem, 3.2vw, 3.75rem);
+    text-align: start;
   }
 
   .image-content__text {
@@ -430,17 +505,21 @@ hr {
   }
 
   .image-content__image--reverse {
-    grid-column: 7 / -1;
+    grid-column: 7 / 13;
   }
 
   .image-content__content--reverse {
-    grid-column: 1 / -7;
+    grid-column: 1 / 7;
   }
 
   /* component block text only */
 
+  .text-only {
+    grid-template-rows: auto;
+  }
+
   .text-only__header {
-    grid-column: 2 / -10;
+    grid-column: 2 / 4;
     grid-row: 1;
   }
 
@@ -458,24 +537,27 @@ hr {
   }
 
   .text-only__card {
-    padding-block: clamp(45px, 3.52vw, 4.0625rem);
+    padding-block: clamp(2.8125rem, 3.52vw, 4.0625rem);
   }
 
   .text-only__card--mission {
-    grid-column: 4 / -7;
-    padding-inline-start: clamp(2.25rem, 3.2vw, 3.75rem);
+    grid-column: 4 / 7;
+    grid-row: 1;
     justify-items: start;
+    padding-inline: clamp(2.25rem, 3.2vw, 3.75rem) 0;
   }
 
   .text-only__card--vision {
-    grid-column: 7 / -4;
+    grid-column: 7 / 10;
+    grid-row: 1;
     padding-inline: clamp(2.3125rem, 3.125vw, 2.815rem);
   }
 
   .text-only__card--values {
-    grid-column: 10 / -1;
-    padding-inline-end: clamp(2.25rem, 3.2vw, 3.75rem);
+    grid-column: 10 / 13;
+    grid-row: 1;
     justify-items: end;
+    padding-inline: 0 clamp(2.25rem, 3.2vw, 3.75rem);
   }
 
   .card-purpose {
@@ -484,6 +566,10 @@ hr {
 
   .card-purpose__title {
     font-size: clamp(1.3125rem, 1.81vw, 1.625rem);
+  }
+
+  hr {
+    max-inline-size: 16.75rem;
   }
 
   .card-purpose__body {
@@ -500,15 +586,15 @@ hr {
   }
 
   .text-only__header--reverse {
-    grid-column: 10 / -2;
+    grid-column: 10 / 12;
   }
 
   .text-only__card--wrapper-all {
     column-gap: clamp(0.4375rem, 0.59vw, 2.3125rem);
     flex-direction: row;
-    grid-column: 1 / -4;
+    grid-column: 1 / 10;
     justify-content: space-between;
-    padding: clamp(4.375rem, 5.9vw, 5.3125rem) clamp(2.25rem, 3.2vw, 3.75rem);
+    padding: clamp(4.375rem, 5vw, 5.3125rem) clamp(2.25rem, 3.2vw, 3.75rem);
   }
 
   .card-service__title {
@@ -554,4 +640,3 @@ hr {
     padding-block: clamp(1.875rem, 2.91vw, 2.625rem) 0.5rem;
   }
 }
-
