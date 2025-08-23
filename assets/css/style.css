@@ -68,7 +68,7 @@ body {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding-block: clamp(2.25rem, 4.45vw, 2rem);
+  padding-block: clamp(1rem, 4.45vw, 2rem);
 }
 
 .hedader img {
@@ -151,6 +151,7 @@ body {
 .text-only__card--wrapper-all {
   /* column-gap: clamp(0.4375rem, 0.59vw, 2.3125rem); */
   display: flex;
+  row-gap: 4rem;
   /* grid-column: 1 / -4;
   justify-content: space-between;
   padding: clamp(4.375rem, 5.9vw, 5.3125rem) clamp(2.25rem, 3.2vw, 3.75rem); */
@@ -183,10 +184,22 @@ hr {
   max-inline-size: 13.25rem;
 }
 
+.card-service__body,
+.card-service__title {
+  /* padding-block-start: clamp(1.125rem, 1.38vw, 1.375rem); */
+  padding-block-start: 22px;
+}
+
+.card-service__icon {
+  display: block;
+  margin-inline: auto;
+}
+
 .card-service__title {
   font-weight: 600;
   max-inline-size: 18ch;
   text-align: center;
+  margin-inline: auto;
 }
 
 .card-service__list-services {
@@ -194,6 +207,7 @@ hr {
   list-style-type: none;
   font-size: 1rem;
   line-height: 1.5;
+  text-align: center;
 }
 
 .insurence {
@@ -221,6 +235,13 @@ hr {
   line-height: 1.5;
   margin-block-start: 1rem;
   text-align: center;
+}
+
+.insurence__text {
+  text-align: center;
+  font-size: clamp(1rem, 1.12vw, 1.125rem);
+  line-height: calc(clamp(1rem, 1.12vw, 1.125rem) * 1.6);
+  margin-block-end: clamp(1rem, 2.22vw, 2rem);
 }
 
 .insurence__text:last-child {
@@ -271,17 +292,23 @@ hr {
 }
 
 .footer__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
   margin-inline: auto;
   padding-block: 42px 8px;
 }
 
 .informations {
+  align-items: center;
   display: flex;
   flex-direction: column;
+  row-gap: 2rem;
 }
 
 .contact-list {
   list-style-type: none;
+  text-align: center;
 }
 
 .contact-list__item {
@@ -316,11 +343,17 @@ hr {
   row-gap: 1rem;
 }
 
+.company__logo {
+  display: block;
+  margin-inline: auto;
+}
+
 .company__content {
   color: var(--color-tx-light);
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
+  text-align: center;
 }
 
 .company__address {
@@ -351,6 +384,11 @@ hr {
 /* TABLET ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
 @media screen and (min-width: 575.98px) {
+  
+  .header {
+    padding-block: clamp(0.5rem, 1.31vw, 0.625rem); 
+  }
+
   .container {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
@@ -365,6 +403,7 @@ hr {
   }
 
   /* component block image and content */
+
   .image-content {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -420,11 +459,19 @@ hr {
   .text-only {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(4, auto);
+  }
+
+  .text-only--reverse {
+    margin-top: clamp(1.625rem, 4.17vw, 2rem); /* minimo */
   }
 
   .text-only__header {
     grid-column: 2 / 13;
+    grid-row: 1 / 2;
+  }
+
+  .text-only__header--reverse {
+    grid-column: 1 / 12;
     grid-row: 1 / 2;
   }
 
@@ -438,6 +485,18 @@ hr {
   .text-only__title--reverse {
     text-align: end;
   }
+
+  .text-only__card--wrapper-all {
+    column-gap: 4rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-column: 1 / 12;
+    grid-row: 2 / 3;
+    justify-content: center;
+    padding: clamp(1rem, 4.17vw, 2rem) clamp(2.25rem, 3.2vw, 3.75rem); /* minimo */
+  }
+
+  /* Our purpose */
 
   .text-only__card--mission,
   .text-only__card--vision,
@@ -461,13 +520,79 @@ hr {
     padding-block: 0 clamp(1.25rem, 4.17vw, 2rem); /* minimo */
   }
 
+  .card-purpose__body {
+    padding-block-start: clamp(1rem, 2.87vw, 1.375rem); /* minimo */
+  }
+
+  .card-purpose__title {
+    font-size: clamp(1.3125rem, 3.39vw, 1.625rem); /* minimo */
+  }
+
+  .card-purpose__text {
+    font-size: clamp(1rem, 2.35vw, 1.125rem); /* minimo */
+    line-height: calc(clamp(1rem, 2.35vw, 1.125rem) * 1.5); /* minimo */
+  }
+
+  /* Our services */
+
+  .card-service {
+    max-inline-size: 16rem;
+  }
+
+  .card-service__title {
+    font-size: clamp(1rem, 2.35vw, 1.125rem); /* minimo */
+    text-align: center;
+  }
+
+  .card-service__list-services {
+    text-align: center;
+    font-size: calc(clamp(1rem, 2.35vw, 1.125rem)); /* minimo */
+    line-height: calc(clamp(1rem, 2.35vw, 1.125rem) * 1.5); /* minimo */
+  }
+
+  /* Insurence */
+
+  .insurence {
+    gap: 1.375rem 0;
+    padding-block: clamp(1rem, 4.17vw, 2rem); /* minimo */
+    padding-inline: clamp(2.25rem, 8.34vw, 4rem); /* minimo */
+  }
+
+  .insurence__text {
+    font-size: clamp(1rem, 2.35vw, 1.125rem); /* minimo */
+    line-height: calc(clamp(1rem, 2.35vw, 1.125rem) * 1.6); /* minimo */
+    margin-block-end: clamp(1rem, 4.17vw, 2rem); /* minimo */
+  }
+
+  /* Talk to counters */
+
+  .talk-counters {
+    padding-block: clamp(1rem, 4.17vw, 2rem); /* minimo */
+    row-gap: clamp(1rem, 4.17vw, 2rem); /* minimo */
+    padding-inline: clamp(2.25rem, 8.34vw, 4rem); /* minimo */
+  }
+
+  .talk-counters__text {
+    font-size: clamp(1rem, 2.87vw, 1.375rem); /* minimo */
+    line-height: calc(clamp(1rem, 2.87vw, 1.375rem) * 1.4); /* minimo */
+  }
+
   .footer {
     grid-column: 1 / -1;
+  }
+
+  .footer__content {
+    padding-block: clamp(1rem, 4.17vw, 2rem) 0.5rem; /* minimo */
   }
 }
 
 /* DESKTOP ----------------------------------------------------------------------- */
 @media screen and (min-width: 1200.98px) {
+
+  .header {
+    padding-block: clamp(1.25rem, 2.5vw, 2rem); /* minimo */
+  }
+
   /* component block image and content */
 
   .image-content {
@@ -514,13 +639,17 @@ hr {
 
   /* component block text only */
 
-  .text-only {
-    grid-template-rows: auto;
+  .text-only--reverse {
+    margin-top: clamp(1.625rem, 2.23vw, 2rem);
   }
 
   .text-only__header {
     grid-column: 2 / 4;
     grid-row: 1;
+  }
+
+  .text-only__header--reverse {
+    grid-column: 10 / 12;
   }
 
   .text-only__title {
@@ -539,6 +668,17 @@ hr {
   .text-only__card {
     padding-block: clamp(2.8125rem, 3.52vw, 4.0625rem);
   }
+
+  .text-only__card--wrapper-all {
+    column-gap: clamp(0.4375rem, 0.59vw, 2.3125rem);
+    grid-column: 1 / 10;
+    grid-row: 1;
+    justify-content: space-between;
+    padding: clamp(4.375rem, 5vw, 5.3125rem) clamp(2.25rem, 3.2vw, 3.75rem);
+    row-gap: 0;
+  }
+
+  /* Our Purpose */
 
   .text-only__card--mission {
     grid-column: 4 / 7;
@@ -581,31 +721,29 @@ hr {
     line-height: calc(clamp(1rem, 1.12vw, 1.125rem) * 1.5);
   }
 
-  .text-only--reverse {
-    margin-top: clamp(1.625rem, 2.23vw, 2rem);
+  /* Our services */
+
+  .card-service {
+    max-inline-size: 13.25rem;
   }
 
-  .text-only__header--reverse {
-    grid-column: 10 / 12;
-  }
-
-  .text-only__card--wrapper-all {
-    column-gap: clamp(0.4375rem, 0.59vw, 2.3125rem);
-    flex-direction: row;
-    grid-column: 1 / 10;
-    justify-content: space-between;
-    padding: clamp(4.375rem, 5vw, 5.3125rem) clamp(2.25rem, 3.2vw, 3.75rem);
+  .card-service__icon {
+    margin-inline: 0;
   }
 
   .card-service__title {
     font-size: clamp(1rem, 1.25vw, 1.125rem);
+    margin-inline: 0;
     text-align: start;
   }
 
-  .card-service__body,
-  .card-service__title {
-    padding-block-start: clamp(1.125rem, 1.38vw, 1.375rem);
+  .card-service__list-services {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: start;
   }
+
+  /* Insurence */
 
   .insurence {
     flex-direction: row;
@@ -615,28 +753,47 @@ hr {
   }
 
   .insurence__text {
+    text-align: start;
     font-size: clamp(1rem, 1.12vw, 1.125rem);
     line-height: calc(clamp(1rem, 1.12vw, 1.125rem) * 1.6);
     margin-block-end: clamp(1rem, 2.22vw, 2rem);
   }
 
+  /* Talk to counters */
+
   .talk-counters {
     padding-block: clamp(1.625rem, 2.2vw, 2rem);
+    padding-inline: 0;
     row-gap: clamp(1.25rem, 2vw, 1.95rem);
   }
 
   .talk-counters__text {
-    font-size: clamp(1.5rem, 2.07vw, 1.87rem);
-    line-height: calc(clamp(1.5rem, 2.07vw, 1.87rem) * 1.4);
+    font-size: clamp(1.5rem, 2.08vw, 1.875rem);
+    line-height: calc(clamp(1.5rem, 2.08vw, 1.875rem) * 1.4);
   }
 
-  .informations {
-    flex-direction: row;
-    justify-content: space-between;
-    padding-block-end: 2rem;
-  }
+  /* Footer */
 
   .footer__content {
     padding-block: clamp(1.875rem, 2.91vw, 2.625rem) 0.5rem;
+  }
+
+  .informations {
+    align-items: normal;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 0;
+  }
+
+  .contact-list {
+    text-align: start;
+  }
+
+  .company__logo {
+    margin-inline: 0;
+  }
+
+  .company__content {
+    text-align: start;
   }
 }
