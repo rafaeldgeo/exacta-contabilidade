@@ -69,29 +69,34 @@ body {
   display: flex;
   justify-content: space-between;
   padding-block: 22px; /* revisar */
-  padding-inline: 0; /* revisar */
+  padding-inline: 22px; /* revisar */
 }
 
 .logo__img,
-.slogan {
+.slogan__img {
   display: block;
-  block-size: auto;
 }
 
 .logo {
+  inline-size: clamp(10.07rem, 29.3vw, 22.625rem); /* ok devices */
   /* vazio */
 }
 
 .logo__img {
-  inline-size: clamp(10.07rem, 29.3vw, 22.625rem); /* ok devices */
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
 }
 
 .slogan {
+  inline-size: clamp(4.8125rem, 18.23vw, 11.75rem); /* ok devices */
   /* vazio */
 }
 
 .slogan__img {
-  inline-size: clamp(4.8125rem, 18.23vw, 11.75rem); /* ok devices */
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
 }
 
 .main {
@@ -110,6 +115,7 @@ body {
 }
 
 .image-content__image {
+  background-color: var(--color-bg-block-image-content--imagem);
   /* vazio */
 }
 
@@ -117,8 +123,9 @@ body {
   /* vazio */
 }
 
-.image-conten__photo {
+.image-content__photo {
   /* vazio */
+  display: block;
 }
 
 .image-content__content {
@@ -275,7 +282,7 @@ hr {
 }
 
 .card-service__title {
-  font-size: 1.125rem; 
+  font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.5;
   margin-inline: auto; /* dk*/
@@ -350,12 +357,16 @@ hr {
   color: var(--color-tx-light);
   display: flex;
   flex-direction: column;
+  padding: 2rem 1.375rem; /* dk*/
+  row-gap: 1.375rem;
 }
 
 .talk-counters__text {
+  font-size: 1.125rem; /* tb e dk*/
   font-weight: 500;
-  text-align: center;
+  line-height: 1.2; /* tb e dk*/
   max-inline-size: 50ch;
+  text-align: center;
 }
 
 .btn {
@@ -366,10 +377,11 @@ hr {
   column-gap: 1.25rem;
   cursor: pointer;
   display: inline-flex;
-  font-size: 1.25rem;
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.25rem); /* tb e dk*/
+  line-height: 1;
   font-weight: 600;
   letter-spacing: 0.0625rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.5rem; /* tb e dk*/
   text-align: center;
 }
 
@@ -392,30 +404,31 @@ hr {
 
 .footer {
   background-color: var(--color-bg-footer);
+  padding-inline: 1.375rem; /* tb e dk*/
+  padding-block: 2rem 0.5rem; /* tb e dk*/
 }
 
 .footer__content {
   display: flex;
   flex-direction: column;
-  row-gap: 2rem;
   margin-inline: auto;
-  padding-block: 42px 8px; /* verificar */
+  row-gap: 2rem; /* tb e dk*/
 }
 
 .informations {
-  align-items: center;
+  align-items: center; /* dk */
   display: flex;
-  flex-direction: column;
-  row-gap: 2rem;
+  flex-direction: column; /* dk */
+  row-gap: 2rem; /* dk */
 }
 
 .contact-list {
   list-style-type: none;
-  text-align: center;
+  text-align: start; /* tb e dk*/
 }
 
 .contact-list__item {
-  font-size: 1.125rem;
+  font-size: 1rem; /* tb e dk*/
   font-weight: 500;
 }
 
@@ -464,7 +477,7 @@ hr {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  text-align: center;
+  text-align: center; /* dk*/
 }
 
 .company__cnpj {
