@@ -34,6 +34,7 @@
   font-family: var(--font);
   margin: 0;
   padding: 0;
+  /* border: 1px solid red; */
 }
 
 html,
@@ -56,10 +57,6 @@ body {
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  inline-size: 100%;
   margin-inline: auto;
   max-inline-size: 90rem;
 }
@@ -68,8 +65,7 @@ body {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding-block: 22px; /* revisar */
-  padding-inline: 22px; /* revisar */
+  padding: 1.375rem; /* revisar */
 }
 
 .logo__img,
@@ -115,8 +111,8 @@ body {
 }
 
 .image-content__image {
+  /* VERIFICAR ASPECT-RATIO */
   background-color: var(--color-bg-block-image-content--imagem);
-  /* vazio */
 }
 
 .image-content__image--reverse {
@@ -164,7 +160,6 @@ body {
 .image-content__text {
   color: var(--color-tx-dark);
   font-weight: 400;
-  inline-size: 100%;
   font-size: 1rem; /* tb e dk*/
   line-height: 1.6; /* tb e dk*/
   margin-block-end: 1.375rem; /* tb e dk*/
@@ -213,9 +208,9 @@ body {
 .text-only__card--wrapper-all {
   display: flex;
   flex-direction: column;
-  row-gap: 2rem; /* tb e dk*/
+  gap: 2rem 0; /* tb e dk*/
   align-items: center; /* tb e dk*/
-  padding-block: 2rem; /* tb e dk*/
+  padding: 2rem 0;
 }
 
 .text-only__card--mission,
@@ -231,7 +226,6 @@ body {
 
 .card-purpose {
   color: var(--color-tx-dark);
-  inline-size: 100%; /* tb e dk*/
   text-align: center; /* tb e dk*/
 }
 
@@ -245,8 +239,7 @@ body {
 hr {
   background-color: var(--color-orange-700);
   border: none;
-  height: 0.25rem;
-  inline-size: 100%;
+  block-size: 0.25rem;
   max-inline-size: 13.125rem; /* tb e dk*/
   margin-inline: auto; /* tb e dk*/
 }
@@ -540,4 +533,338 @@ hr {
 }
 
 .talk-departament__icon {
+}
+
+/* TABLET view 575.98px */
+@media screen and (min-width: 35.99875rem) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .header {
+    grid-column: 2 / 12;
+    padding: 2rem 0; /* revisar */
+  }
+
+  .logo {
+    /* vazio */
+  }
+
+  .logo__img {
+    /* vazio */
+  }
+
+  .slogan {
+    /* vazio */
+  }
+
+  .slogan__img {
+    /* vazio */
+  }
+
+  .main {
+    grid-column: 1 / 13;
+  }
+
+  /* TABLET - component Block image and content */
+
+  .image-content {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .image-content--reverse {
+    grid-column: 2 / 13;
+  }
+
+  .image-content__image {
+    aspect-ratio: 704 / 485;
+    grid-column: 1 / 12;
+  }
+
+  .image-content__image--reverse {
+    grid-column: 2 / 13;
+  }
+
+  .image-conten__photo {
+    /* vazio */
+  }
+
+  .image-content__content {
+    grid-column: 1 / 12;
+  }
+
+  .image-content__content--reverse {
+    grid-column: 2 / 13;
+  }
+
+  .image-content__title {
+    font-size: 2.25rem;
+    padding: 1rem 2rem;
+    text-align: end;
+  }
+
+  .image-content__title--reverse {
+    text-align: start;
+  }
+
+  .image-content__body {
+    padding-block: 2rem;
+    padding-inline: 4rem 0;
+  }
+
+  .image-content__body--reverse {
+    padding-inline: 0 4rem;
+  }
+
+  .image-content__text {
+    font-size: 1.125rem;
+    margin-block-end: 2rem;
+    max-inline-size: 40rem;
+    text-align: start;
+  }
+
+  /* TABLET - component Block text only */
+
+  .text-only {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .text-only--reverse {
+    /* vazio */
+  }
+
+  .text-only__header {
+    grid-column: 2 / 13;
+    grid-row: 1 / 2;
+  }
+
+  .text-only__header--reverse {
+    grid-column: 1 / 12;
+    grid-row: 1 / 2;
+  }
+
+  .text-only__title {
+    font-size: 2.25rem;
+    padding: 1rem 2rem;
+    text-align: start;
+  }
+
+  .text-only__title--reverse {
+    text-align: end;
+  }
+
+  .text-only__card {
+    /* vazio */
+  }
+
+  .text-only__card--wrapper-all {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0 4rem;
+    grid-column: 1 / 12;
+    grid-row: 2 / 3;
+    justify-content: center;
+    padding: 2rem 3.75rem;
+  }
+
+  .text-only__card--mission,
+  .text-only__card--vision,
+  .text-only__card--values {
+    grid-column: 2 / 13;
+    padding-inline: 2rem 4rem;
+  }
+
+  .text-only__card--mission {
+    grid-row: 2 / 3;
+    padding-block: 2rem 0;
+  }
+
+  .text-only__card--vision {
+    grid-row: 3 / 4;
+    padding-block: 2rem;
+  }
+
+  .text-only__card--values {
+    grid-row: 4 / 5;
+    padding-block: 0 2rem;
+  }
+
+  /* TABLET - card purpose */
+
+  .card-purpose {
+    text-align: start;
+  }
+
+  .card-purpose__title {
+    /* vazio */
+  }
+
+  hr {
+    margin-inline: 0;
+  }
+
+  .card-purpose__body {
+    /* vazio */
+  }
+
+  .card-purpose__text {
+    font-size: 1.125rem;
+  }
+
+  .text-only__title--reverse {
+    /* vazio */
+  }
+
+  /*  PAREI AQUI */
+  .card-service {
+  }
+
+  .card-service__header {
+  }
+
+  .card-service__icon-wrapper {
+  }
+
+  .card-service__icon {
+  }
+
+  .card-service__title {
+  }
+
+  .card-service__body {
+  }
+
+  .card-service__list-services {
+  }
+
+  .card-service__type {
+  }
+
+  .insurence {
+  }
+
+  .insurence__icon-wrapper {
+  }
+
+  .insurence__icon {
+  }
+
+  .insurence__icon-text {
+  }
+
+  .insurence__body {
+  }
+
+  .insurence__text {
+  }
+
+  .talk-counters {
+  }
+
+  .talk-counters__text {
+  }
+
+  .btn {
+  }
+
+  .btn__icon-wrapper {
+  }
+
+  .btn__icon {
+  }
+
+  .btn__label {
+  }
+
+  .footer {
+    grid-column: 1 / 13;
+    padding-inline: 4rem;
+  }
+
+  .footer__content {
+  }
+
+  .informations {
+  }
+
+  .contact-list {
+  }
+
+  .contact-list__item {
+  }
+
+  .contact-list__link {
+  }
+
+  .contact-list__email {
+  }
+
+  .contact-list__icon {
+  }
+
+  .company {
+  }
+
+  .company__logo-wrapper {
+  }
+
+  .company__logo {
+  }
+
+  .company__content {
+  }
+
+  .company__cnpj {
+  }
+
+  .company__address {
+  }
+
+  .credits {
+  }
+
+  .credits__exacta {
+  }
+
+  .credits__developer {
+  }
+
+  .credits__developer-link {
+  }
+
+  .modal {
+  }
+
+  .modal__overlayer {
+  }
+
+  .modal__content {
+  }
+
+  .modal__header {
+  }
+
+  .modal__title {
+  }
+
+  .modal__btn-closer {
+  }
+
+  .modal__body {
+  }
+
+  .talk-department__content {
+  }
+
+  .talk-departament__title {
+  }
+
+  .talk-departament__link {
+  }
+
+  .talk-departament__icon {
+  }
 }
