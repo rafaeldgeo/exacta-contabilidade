@@ -1115,8 +1115,8 @@ hr {
   }
 
   .card-service__list-services {
-    text-align: start;
     font-size: 1rem;
+    text-align: start;
   }
 
   .card-service__type {
