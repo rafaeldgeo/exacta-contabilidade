@@ -206,11 +206,19 @@ body {
 }
 
 .text-only__card--wrapper-all {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 2rem 0; /* tb e dk*/
-  align-items: center; /* tb e dk*/
+  gap: 2rem 0;
   padding: 2rem 0;
+}
+
+.text-only__card-group {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem 0;
+  inline-size: 100%;
 }
 
 .text-only__card--mission,
@@ -258,7 +266,7 @@ hr {
 .card-service {
   color: var(--color-tx-dark);
   inline-size: 100%;
-  max-inline-size: 13.25rem; /* usar para dk*/
+  max-inline-size: 16rem;
 }
 
 .card-service__header {
@@ -665,14 +673,19 @@ hr {
   }
 
   .text-only__card--wrapper-all {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2rem 4rem;
+    align-items: start;
+    flex-direction: column;
     grid-column: 1 / 12;
     grid-row: 2 / 3;
     justify-content: center;
-    align-items: start;
     padding: 2rem 3.75rem;
+  }
+
+  .text-only__card-group {
+    align-items: start;
+    flex-direction: row;
+    gap: 0 2rem;
+    justify-content: center;
   }
 
   .text-only__card--mission,
@@ -723,10 +736,10 @@ hr {
     /* vazio */
   }
 
-  /* MOBILE - card service */
+  /* TABLET - card service */
 
   .card-service {
-    max-inline-size: 16rem;
+    inline-size: 16rem;
   }
 
   .card-service__header {
@@ -1033,15 +1046,23 @@ hr {
 
   .text-only__card {
     display: flex;
-    /* padding-block: 64px; */
   }
-  
+
   .text-only__card--wrapper-all {
     grid-column: 1 / 10;
+    flex-direction: row;
     grid-row: 1;
-    justify-content: space-between;
-    padding: 6rem 3.75rem;
-    gap: 2.3125rem 0;
+    justify-content: center;
+    padding: 6rem 0;
+    gap: 0 5px;
+  }
+
+  .text-only__card-group {
+    width: auto;
+    align-items: start;
+    flex-direction: row;
+    gap: 0 5px;
+    justify-content: stretch;
   }
 
   .text-only__card--mission,
@@ -1090,7 +1111,7 @@ hr {
   /* DESKTOP - card service */
 
   .card-service {
-    max-inline-size: 13.25rem;
+    inline-size: 13.25rem;
   }
 
   .card-service__header {
