@@ -206,11 +206,19 @@ body {
 }
 
 .text-only__card--wrapper-all {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 2rem 0; /* tb e dk*/
-  align-items: center; /* tb e dk*/
+  gap: 2rem 0;
   padding: 2rem 0;
+}
+
+.text-only__card-group {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem 0;
+  inline-size: 100%;
 }
 
 .text-only__card--mission,
@@ -258,7 +266,7 @@ hr {
 .card-service {
   color: var(--color-tx-dark);
   inline-size: 100%;
-  max-inline-size: 13.25rem; /* usar para dk*/
+  max-inline-size: 16rem;
 }
 
 .card-service__header {
@@ -303,20 +311,22 @@ hr {
 /* MOBILE - Insurence */
 
 .insurence {
-  align-items: center; /* dk*/
   background-color: var(--color-bg-insurence);
   color: var(--color-tx-dark);
   display: flex;
   flex-direction: column; /* dk*/
   gap: 1.375rem 0; /* dk*/
   padding: 2rem 1.375rem; /* tb e dk*/
+  inline-size: 100%;
+  align-items: center;
 }
 
 .insurence__icon-wrapper {
   align-items: center;
   display: flex;
   flex-direction: column;
-  inline-size: 10.5rem;
+  inline-size: 100%;
+  max-inline-size: 10.5rem;
 }
 
 .insurence__icon {
@@ -332,14 +342,15 @@ hr {
 }
 
 .insurence__body {
+  /* inline-size: 100%; */
   /* vazio */
 }
 
 .insurence__text {
-  text-align: center; /* dk*/
   font-size: 1rem;
   line-height: 1.6;
   margin-block-end: 1.375rem;
+  text-align: center;
 }
 
 .insurence__text:last-child {
@@ -374,7 +385,7 @@ hr {
   column-gap: 1.25rem;
   cursor: pointer;
   display: inline-flex;
-  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.25rem); /* tb e dk*/
+  font-size: clamp(1.125rem, calc(1rem + 0.5vw), 1.25rem); /* tb e dk*/
   line-height: 1;
   font-weight: 600;
   letter-spacing: 0.0625rem;
@@ -422,6 +433,9 @@ hr {
 .contact-list {
   list-style-type: none;
   text-align: start; /* mesmo em dk*/
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.625rem;
 }
 
 .contact-list__item {
@@ -434,8 +448,8 @@ hr {
   align-items: center;
   color: var(--color-tx-light);
   column-gap: 0.5rem;
-  display: inline-flex;
-  margin: 0;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .contact-list__link {
@@ -451,7 +465,7 @@ hr {
 }
 
 .contact-list__icon {
-  /* vazio */
+  display: block;
 }
 
 .company {
@@ -537,6 +551,25 @@ hr {
 }
 
 .talk-departament__icon {
+}
+
+/* B R E A K P O I N T - Mobile view 374.98px */
+@media screen and (max-width: 23.43625rem) {
+
+  .btn__icon-wrapper {
+    display: none;
+  }
+
+  .contact-list__link,
+  .contact-list__email {
+    font-size: 0.9375rem;
+    justify-content: center;
+  }
+
+  .contact-list__icon {
+    display: none;
+  }
+
 }
 
 /* B R E A K P O I N T - TABLET view 575.98px */
@@ -665,14 +698,17 @@ hr {
   }
 
   .text-only__card--wrapper-all {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2rem 4rem;
+    align-items: start;
     grid-column: 1 / 12;
     grid-row: 2 / 3;
-    justify-content: center;
+    padding: 2rem 0;
+  }
+
+  .text-only__card-group {
     align-items: start;
-    padding: 2rem 3.75rem;
+    flex-direction: row;
+    gap: 0 2rem;
+    justify-content: center;
   }
 
   .text-only__card--mission,
@@ -723,10 +759,10 @@ hr {
     /* vazio */
   }
 
-  /* MOBILE - card service */
+  /* TABLET - card service */
 
   .card-service {
-    max-inline-size: 16rem;
+    inline-size: 16rem;
   }
 
   .card-service__header {
@@ -750,7 +786,7 @@ hr {
   }
 
   .card-service__list-services {
-    font-size: 1.125rem;
+    font-size: clamp(1rem, calc(0.0625rem + 2.25vw), 1.125rem);
   }
 
   .card-service__type {
@@ -822,10 +858,6 @@ hr {
     /* vazio */
   }
 
-  .contact-list {
-    text-align: center;
-  }
-
   .contact-list__item {
     /* vazio */
   }
@@ -836,6 +868,11 @@ hr {
 
   .contact-list__email {
     /* vazio */
+  }
+
+  .contact-list__link,
+  .contact-list__email {
+    justify-content: center;
   }
 
   .contact-list__icon {
@@ -916,7 +953,15 @@ hr {
   }
 }
 
-/* B R E A K P O I N T - DESKTOP view 1200.98px */
+/* B R E A K P O I N T - LARGER(LG) view 992.98px */
+@media screen and (max-width: 62.06125rem) {
+  .header {
+    background-color: red;
+  }
+
+}
+
+/* B R E A K P O I N T - DESKTOP - EXTRA LAGER(XL) view 1200.98px */
 @media screen and (min-width: 75.06125rem) {
   .container {
     /* vazio */
@@ -990,7 +1035,7 @@ hr {
 
   .image-content__body {
     padding-block: 2rem;
-    padding-inline: 3.75rem;
+    padding-inline: 3.75rem clamp(3.125rem, calc(1rem + 3vw), 3.75rem);
   }
 
   .image-content__body--reverse {
@@ -1022,46 +1067,59 @@ hr {
   }
 
   .text-only__title {
-    padding: 2rem;
+    padding: 2rem clamp(1.4375rem, calc(0.2rem + 1.67vw), 2rem) 2rem 0;
     text-align: end;
   }
 
   .text-only__title--reverse {
+    padding: 2rem 0 2rem clamp(1.4375rem, calc(0.2rem + 1.67vw), 2rem);
     text-align: start;
   }
 
   .text-only__card {
-    /* padding-block: 64px; */
+    display: flex;
   }
+
   .text-only__card--wrapper-all {
+    flex-direction: row;
+    gap: 0 min(0.7vw, 0.625rem);
     grid-column: 1 / 10;
     grid-row: 1;
-    justify-content: space-between;
-    padding: 6rem 3.75rem;
-    gap: 2.3125rem 0;
+    justify-content: center;
+    padding: 6rem 0;
+  }
+
+  .text-only__card-group {
+    align-items: start;
+    flex-direction: row;
+    gap: 0 min(0.7vw, 0.625rem);
+    inline-size: auto;
+    justify-content: stretch;
   }
 
   .text-only__card--mission,
   .text-only__card--vision,
   .text-only__card--values {
     grid-row: 1;
-    padding-block: 64px;
+    padding-block: 4rem;
   }
 
   .text-only__card--mission {
-    align-content: start;
     grid-column: 4 / 7;
-    padding-inline: 3.75rem 0;
+    justify-content: end;
+    padding-inline: 0;
   }
 
   .text-only__card--vision {
     grid-column: 7 / 10;
-    padding-inline: 2.815rem;
+    justify-content: center;
+    padding-inline: 0;
   }
 
   .text-only__card--values {
     grid-column: 10 / 13;
-    padding-inline: 0 3.75rem;
+    justify-content: start;
+    padding-inline: 0;
   }
 
   /* DESKTOP - card purpose */
@@ -1085,7 +1143,7 @@ hr {
   /* DESKTOP - card service */
 
   .card-service {
-    max-inline-size: 13.25rem;
+    inline-size: 13.25rem;
   }
 
   .card-service__header {
@@ -1111,6 +1169,7 @@ hr {
 
   .card-service__list-services {
     text-align: start;
+    font-size: 1rem;
   }
 
   .card-service__type {
@@ -1122,8 +1181,8 @@ hr {
   .insurence {
     flex-direction: row;
     gap: 0 3.125rem;
-    justify-content: space-between;
-    padding: 2rem 3.75rem;
+    justify-content: stretch;
+    padding: 2rem clamp(3.125rem, calc(1rem + 3vw), 3.75rem);
   }
 
   .insurence__icon-wrapper {
@@ -1173,7 +1232,7 @@ hr {
   }
 
   .footer {
-    padding-inline: 3.75rem;
+    padding-inline: clamp(3.125rem, calc(1rem + 3vw), 3.75rem);
   }
 
   .footer__content {
@@ -1202,6 +1261,11 @@ hr {
 
   .contact-list__email {
     /* vazio */
+  }
+
+  .contact-list__link,
+  .contact-list__email {
+    justify-content: flex-start;
   }
 
   .contact-list__icon {
@@ -1247,7 +1311,6 @@ hr {
   .credits__developer-link {
     /* vazio */
   }
-
 
   .modal {
   }
