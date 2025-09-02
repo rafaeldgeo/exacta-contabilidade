@@ -373,7 +373,7 @@ hr {
 }
 
 .talk-counters__text {
-  font-size: 1.125rem; /* tb e dk*/
+  font-size: 1.25rem; /* tb e dk*/
   font-weight: 500;
   line-height: 1.5; /* tb e dk*/
   max-inline-size: 50ch;
@@ -452,7 +452,7 @@ hr {
   color: var(--color-tx-light);
   column-gap: 0.5rem;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .contact-list__link {
@@ -569,7 +569,6 @@ hr {
   .contact-list__link,
   .contact-list__email {
     font-size: 0.9375rem;
-    justify-content: center;
   }
 
   .contact-list__icon {
@@ -579,14 +578,32 @@ hr {
 
 /* B R E A K P O I N T - SMALL min-width 575.98px */
 @media screen and (min-width: 35.99875rem) {
-
   .header {
     background-color: orange;
   }
 
+  .image-content__text {
+    font-size: 1.125rem;
+  }
+
+  .text-only__card-group {
+    align-items: start;
+    flex-direction: row;
+    gap: 0 2rem;
+    justify-content: center;
+  }
+
+  .talk-counters__text {
+    font-size: 1.375rem;
+  }
+
+  .contact-list__link,
+  .contact-list__email {
+    font-size: 1.125rem;
+  }
 }
 
-/* B R E A K P O I N T - MEDIUM  min-width 575.98px */
+/* B R E A K P O I N T - MEDIUM  min-width 767.98px */
 @media screen and (min-width: 47.99875rem) {
   .header {
     background-color: blue;
@@ -666,7 +683,7 @@ hr {
 
   .image-content__body {
     padding-block: 2rem;
-    padding-inline: 4rem 0;
+    padding-inline: min(8.32vw, 5.16rem) 0; /* definir no vermelho */
   }
 
   .image-content__body--reverse {
@@ -674,9 +691,8 @@ hr {
   }
 
   .image-content__text {
-    font-size: 1.125rem;
+    font-size: 1.25rem; /* definir no vermelho */
     margin-block-end: 2rem;
-    max-inline-size: 40rem;
     text-align: start;
   }
 
@@ -723,10 +739,7 @@ hr {
   }
 
   .text-only__card-group {
-    align-items: start;
-    flex-direction: row;
-    gap: 0 2rem;
-    justify-content: center;
+    gap: 0 5rem;
   }
 
   .text-only__card--mission,
@@ -844,7 +857,7 @@ hr {
   }
 
   .talk-counters__text {
-    font-size: 1.375rem;
+    font-size: 1.625rem;
   }
 
   .btn {
@@ -890,7 +903,7 @@ hr {
 
   .contact-list__link,
   .contact-list__email {
-    justify-content: center;
+    /* vazio */
   }
 
   .contact-list__icon {
@@ -976,8 +989,64 @@ hr {
   .header {
     background-color: red;
   }
+
+  .image-content__title {
+    padding: 1rem 2rem;
+    text-align: end;
+  }
+
+  .image-content__title--reverse {
+    text-align: start;
+    /* vazio */
+  }
+
+  .image-content__body {
+    padding-inline: min(8.34vw, 6.25rem) 0;
+  }
+
+  .image-content__body--reverse {
+    padding-inline: 0 4rem;
+  }
+
+  .text-only__card-group {
+    gap: 0 9.375rem;
+  }
+
+  .insurence {
+    flex-direction: row;
+    gap: 0 3.125rem;
+    justify-content: stretch;
+    padding: 2rem clamp(3.125rem, calc(1rem + 3vw), 3.75rem);
+  }
+
+  .insurence__text {
+    inline-size: 100%;
+    max-inline-size: 68rem;
+    text-align: start;
+  }
+
+  .informations {
+    align-items: start;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 0;
+  }
+
+  .contact-list__link,
+  .contact-list__email {
+    justify-content: flex-start;
+  }
+
+  .company__content {
+    text-align: start;
+  }
+
+  .company__logo {
+    margin-inline: 0;
+  }
 }
 
+/* OK */
 /* B R E A K P O I N T - EXTRA LAGER min-width 1200.98px */
 @media screen and (min-width: 75.06125rem) {
   .header {
@@ -1064,8 +1133,7 @@ hr {
   }
 
   .image-content__text {
-    max-inline-size: 37.5rem;
-    /* vazio */
+    font-size: clamp(1.125rem, 0.5rem + 0.84vw, 1.25rem);
   }
 
   /* XL - component Block text only */
@@ -1199,12 +1267,12 @@ hr {
 
   /* XL - Insurence */
 
-  .insurence {
+  /* .insurence {
     flex-direction: row;
     gap: 0 3.125rem;
     justify-content: stretch;
     padding: 2rem clamp(3.125rem, calc(1rem + 3vw), 3.75rem);
-  }
+  } */
 
   .insurence__icon-wrapper {
     /* vazio */
@@ -1222,11 +1290,11 @@ hr {
     /* vazio */
   }
 
-  .insurence__text {
+  /* .insurence__text {
     inline-size: 100%;
     max-inline-size: 68rem;
     text-align: start;
-  }
+  } */
 
   .talk-counters {
     padding: 2rem 3.75rem;
@@ -1260,20 +1328,19 @@ hr {
     /* vazio */
   }
 
-  .informations {
+  /* .informations {
     align-items: start;
     flex-direction: row;
     justify-content: space-between;
     row-gap: 0;
-  }
+  } */
 
   .contact-list {
     /* vazio */
   }
 
   .contact-list__item {
-    font-size: 1.125rem;
-    text-align: start;
+    /* text-align: start; */
   }
 
   .contact-list__link {
@@ -1284,10 +1351,10 @@ hr {
     /* vazio */
   }
 
-  .contact-list__link,
+  /* .contact-list__link,
   .contact-list__email {
     justify-content: flex-start;
-  }
+  } */
 
   .contact-list__icon {
     /* vazio */
@@ -1301,13 +1368,13 @@ hr {
     /* vazio */
   }
 
-  .company__logo {
+  /* .company__logo {
     margin-inline: 0;
   }
 
   .company__content {
     text-align: start;
-  }
+  } */
 
   .company__cnpj {
     /* vazio */
