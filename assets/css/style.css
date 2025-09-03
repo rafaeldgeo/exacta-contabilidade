@@ -273,7 +273,9 @@ hr {
 }
 
 .card-service__header {
-  /* vazio */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card-service__icon-wrapper {
@@ -282,7 +284,6 @@ hr {
 
 .card-service__icon {
   display: block;
-  margin-inline: auto; /* mudar dk*/
 }
 
 .card-service__title {
@@ -374,7 +375,7 @@ hr {
 
 .talk-counters__text {
   font-size: 1.25rem; /* tb e dk*/
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5; /* tb e dk*/
   max-inline-size: 50ch;
   text-align: center;
@@ -394,6 +395,7 @@ hr {
   letter-spacing: 0.0625rem;
   padding: 0.75rem 1.5rem; /* tb e dk*/
   text-align: center;
+  transition: background-color 0.4s ease-in-out;
 }
 
 .btn:hover {
@@ -402,11 +404,21 @@ hr {
 }
 
 .btn__icon-wrapper {
-  /* vazio */
+  inline-size: 2.0625rem;
+  block-size: auto;
 }
 
 .btn__icon {
   display: block;
+  fill: var(--color-white);
+}
+
+.btn__icon path {
+  fill: var(--color-white);
+}
+
+.btn:hover .btn__icon path {
+  fill: var(--color-gray-700);
 }
 
 .btn__label {
@@ -1012,6 +1024,10 @@ hr {
     gap: 0 9.375rem;
   }
 
+  .card-service__header {
+    /* vazio */
+  }
+
   .insurence {
     flex-direction: row;
     gap: 0 3.125rem;
@@ -1236,7 +1252,7 @@ hr {
   }
 
   .card-service__header {
-    /* vazio */
+    align-items: start;
   }
 
   .card-service__icon-wrapper {
