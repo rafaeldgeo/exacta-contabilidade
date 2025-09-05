@@ -594,10 +594,6 @@ hr {
     background-color: orange;
   }
 
-  .image-content__image {
-    aspect-ratio: 576 / 485;
-  }
-
   .image-content__text {
     font-size: 1.125rem;
   }
@@ -626,7 +622,7 @@ hr {
     padding: 2rem 0; /* revisar */
     background-color: blue;
   }
-
+  
   .container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -664,7 +660,7 @@ hr {
   }
 
   .image-content__image {
-    aspect-ratio: 768 / 485;
+    aspect-ratio: 704 / 485;
     grid-column: 1 / 12;
   }
 
@@ -1003,14 +999,6 @@ hr {
     background-color: red;
   }
 
-  .main {
-    grid-column: 1 / 13;
-  }
-
-  .image-content__image {
-    aspect-ratio: 600 / 485;
-  }
-
   .image-content__title {
     padding: 1rem 2rem;
     text-align: end;
@@ -1117,7 +1105,7 @@ hr {
   }
 
   .image-content__image {
-    aspect-ratio: 1100 / 485;
+    aspect-ratio: 720 / 452;
     grid-column: 1 / 7;
     grid-row: 1;
   }
@@ -1457,18 +1445,4 @@ hr {
 
   .talk-departament__icon {
   }
-}
-
-/* B R E A K P O I N T - XXL min-width 1439.98px */
-@media screen and (min-width: 89.99875rem) {
-
-  .header {
-    background-color: purple;
-  }
-
-  .image-content__image {
-    aspect-ratio: 720 / 452;
-  }
-
-
 }
