@@ -114,7 +114,6 @@ body {
 }
 
 .image-content__image {
-  /* VERIFICAR ASPECT-RATIO */
   background-color: var(--color-bg-block-image-content--imagem);
 }
 
@@ -122,9 +121,11 @@ body {
   /* vazio */
 }
 
-.image-content__photo {
-  /* vazio */
+.image-content__image img {
   display: block;
+  height: auto;
+  max-inline-size: 100%;
+  object-fit: cover;
 }
 
 .image-content__content {
@@ -574,6 +575,10 @@ hr {
     background-color: green;
   }
 
+  .image-content__image {
+    aspect-ratio: 375 / 485;
+  }
+
   .btn__icon-wrapper {
     display: none;
   }
@@ -592,6 +597,10 @@ hr {
 @media screen and (min-width: 35.99875rem) {
   .header {
     background-color: orange;
+  }
+
+  .image-content__image {
+    aspect-ratio: 576 / 485;
   }
 
   .image-content__text {
@@ -622,7 +631,7 @@ hr {
     padding: 2rem 0; /* revisar */
     background-color: blue;
   }
-  
+
   .container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -660,7 +669,7 @@ hr {
   }
 
   .image-content__image {
-    aspect-ratio: 704 / 485;
+    aspect-ratio: 768 / 485;
     grid-column: 1 / 12;
   }
 
@@ -993,10 +1002,18 @@ hr {
   }
 }
 
-/* B R E A K P O I N T - LARGER min-width 992.98px */
-@media screen and (min-width: 62.06125rem) {
+/* B R E A K P O I N T - LARGER min-width 991.98px */
+@media screen and (min-width: 61.9987rem) {
   .header {
     background-color: red;
+  }
+
+  .main {
+    grid-column: 1 / 13;
+  }
+
+  .image-content__image {
+    aspect-ratio: 600 / 485;
   }
 
   .image-content__title {
@@ -1060,8 +1077,8 @@ hr {
 }
 
 /* OK */
-/* B R E A K P O I N T - EXTRA LAGER min-width 1200.98px */
-@media screen and (min-width: 75.06125rem) {
+/* B R E A K P O I N T - EXTRA LAGER min-width 1199.98px */
+@media screen and (min-width: 74.99875rem) {
   .header {
     background-color: yellow;
   }
@@ -1105,7 +1122,7 @@ hr {
   }
 
   .image-content__image {
-    aspect-ratio: 720 / 452;
+    aspect-ratio: 1100 / 485;
     grid-column: 1 / 7;
     grid-row: 1;
   }
@@ -1444,5 +1461,16 @@ hr {
   }
 
   .talk-departament__icon {
+  }
+}
+
+/* B R E A K P O I N T - XXL min-width 1439.98px */
+@media screen and (min-width: 89.99875rem) {
+  .header {
+    background-color: purple;
+  }
+
+  .image-content__image {
+    aspect-ratio: 720 / 452;
   }
 }
