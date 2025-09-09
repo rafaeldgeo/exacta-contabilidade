@@ -4,6 +4,7 @@
   /* Paleta */
   --color-gray-100: #e6e6e6;
   --color-gray-700: #4d4d4d;
+  --color-gray-apha: rgba(000, 000, 000, 0.8);
   --color-orange-100: #fddec2;
   --color-orange-700: #ff6600;
   --color-white: #ffffff;
@@ -20,6 +21,7 @@
   --color-bg-btn: var(--color-gray-700);
   --color-bg-btn-hover-talk-counters: var(--color-white);
   --color-bg-btn-hover-modal: var(--color-orange-700);
+  --color-bg-modal: var(--color-gray-apha);
 
   --color-tx-dark: var(--color-gray-700);
   --color-tx-light: var(--color-white);
@@ -42,7 +44,10 @@ body {
   inline-size: 100%;
   max-inline-size: 100vw;
   min-block-size: 100vh;
-  overflow: auto; /* desativar */
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .sr-only {
@@ -59,6 +64,10 @@ body {
 .container {
   margin-inline: auto;
   max-inline-size: 90rem;
+}
+
+.container--show-blur {
+  filter: blur(3px);
 }
 
 /* M O B I L E  F I R S T  */
@@ -484,28 +493,28 @@ hr {
 }
 
 .modal {
-  display: block;
-  z-index: 1;
-  background-color: rgba(000, 000, 000, 0.5);
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  background-color: var(--color-bg-modal);
+  block-size: 100%;
+  display: flex;
+  inline-size: 100%;
+  justify-content: center;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
 }
 
-.modal__overlayer {
+.modal[hidden] {
+  display: none;
 }
 
 .modal__content {
   background-color: var(--color-white);
   display: flex;
   flex-direction: column;
-  margin: 10px;
+  margin: 0.625rem;
   inline-size: 100%;
   max-inline-size: 45rem;
 }
@@ -527,7 +536,7 @@ hr {
   text-align: center;
 }
 
-.modal__btn-closer {
+.modal__btn-close {
   align-self: self-start;
   background-color: transparent;
   border: none;
@@ -541,14 +550,16 @@ hr {
 }
 
 .modal__body {
+  background-color: var(--color-gray-100);
 }
+
 
 .talk-department {
   padding-block: min(5.55vw, 2rem);
-  padding-inline: 10px;
+  padding-inline: 0.625rem;
   display: flex;
   flex-direction: column;
-  row-gap: min(5.55vw, 2rem);
+  row-gap: 2rem;
 }
 
 .talk-department__content {
@@ -560,7 +571,7 @@ hr {
 
 .talk-department__title {
   color: var(--color-tx-dark);
-  font-size: clamp(1.125rem, calc(0.5rem + 3vw), 1.25rem);
+  font-size: 1.125rem;
   max-inline-size: 35ch;
   line-height: 1.5;
   text-align: center;
