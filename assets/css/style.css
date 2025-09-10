@@ -553,7 +553,6 @@ hr {
   background-color: var(--color-gray-100);
 }
 
-
 .talk-department {
   padding-block: min(5.55vw, 2rem);
   padding-inline: 0.625rem;
@@ -675,22 +674,6 @@ hr {
     grid-template-columns: repeat(12, 1fr);
   }
 
-  .logo {
-    /* vazio */
-  }
-
-  .logo__img {
-    /* vazio */
-  }
-
-  .slogan {
-    /* vazio */
-  }
-
-  .slogan__img {
-    /* vazio */
-  }
-
   .main {
     grid-column: 1 / 13;
   }
@@ -715,10 +698,6 @@ hr {
     grid-column: 2 / 13;
   }
 
-  .image-conten__photo {
-    /* vazio */
-  }
-
   .image-content__content {
     grid-column: 1 / 12;
   }
@@ -739,7 +718,7 @@ hr {
 
   .image-content__body {
     padding-block: 2rem;
-    padding-inline: min(8.32vw, 5.16rem) 0; /* definir no vermelho */
+    padding-inline: min(8.32vw, 5.16rem) 0;
   }
 
   .image-content__body--reverse {
@@ -747,7 +726,7 @@ hr {
   }
 
   .image-content__text {
-    font-size: 1.25rem; /* definir no vermelho */
+    font-size: 1.25rem;
     margin-block-end: 2rem;
     text-align: start;
   }
@@ -757,10 +736,6 @@ hr {
   .text-only {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-  }
-
-  .text-only--reverse {
-    /* vazio */
   }
 
   .text-only__header {
@@ -781,10 +756,6 @@ hr {
 
   .text-only__title--reverse {
     text-align: end;
-  }
-
-  .text-only__card {
-    /* vazio */
   }
 
   .text-only__card--wrapper-all {
@@ -826,24 +797,12 @@ hr {
     text-align: start;
   }
 
-  .card-purpose__title {
-    /* vazio */
-  }
-
   hr {
     margin-inline: 0;
   }
 
-  .card-purpose__body {
-    /* vazio */
-  }
-
   .card-purpose__text {
     font-size: 1.125rem;
-  }
-
-  .text-only__title--reverse {
-    /* vazio */
   }
 
   /* MD - card service */
@@ -852,32 +811,8 @@ hr {
     inline-size: 16rem;
   }
 
-  .card-service__header {
-    /* vazio */
-  }
-
-  .card-service__icon-wrapper {
-    /* vazio */
-  }
-
-  .card-service__icon {
-    /* vazio */
-  }
-
-  .card-service__title {
-    /* font-size igual mobile */
-  }
-
-  .card-service__body {
-    /* vazio */
-  }
-
   .card-service__list-services {
     font-size: clamp(1rem, calc(0.0625rem + 2.25vw), 1.125rem);
-  }
-
-  .card-service__type {
-    /* vazio */
   }
 
   /* MD - Insurence */
@@ -936,108 +871,6 @@ hr {
     grid-column: 1 / 13;
     padding-inline: 4rem;
   }
-
-  .footer__content {
-    /* vazio */
-  }
-
-  .informations {
-    /* vazio */
-  }
-
-  .contact-list__item {
-    /* vazio */
-  }
-
-  .contact-list__link {
-    /* vazio */
-  }
-
-  .contact-list__email {
-    /* vazio */
-  }
-
-  .contact-list__link,
-  .contact-list__email {
-    /* vazio */
-  }
-
-  .contact-list__icon {
-    /* vazio */
-  }
-
-  .company {
-    /* vazio */
-  }
-
-  .company__logo-wrapper {
-    /* vazio */
-  }
-
-  .company__logo {
-    /* vazio */
-  }
-
-  .company__content {
-    /* vazio */
-  }
-
-  .company__cnpj {
-    /* vazio */
-  }
-
-  .company__address {
-    /* vazio */
-  }
-
-  .credits {
-    /* vazio */
-  }
-
-  .credits__exacta {
-    /* vazio */
-  }
-
-  .credits__developer {
-    /* vazio */
-  }
-
-  .credits__developer-link {
-    /* vazio */
-  }
-
-  .modal {
-  }
-
-  .modal__overlayer {
-  }
-
-  .modal__content {
-  }
-
-  .modal__header {
-  }
-
-  .modal__title {
-  }
-
-  .modal__btn-closer {
-  }
-
-  .modal__body {
-  }
-
-  .talk-department__content {
-  }
-
-  .talk-departament__title {
-  }
-
-  .talk-departament__link {
-  }
-
-  .talk-departament__icon {
-  }
 }
 
 /* B R E A K P O I N T - LARGER min-width 991.98px */
@@ -1057,7 +890,6 @@ hr {
 
   .image-content__title--reverse {
     text-align: start;
-    /* vazio */
   }
 
   .image-content__body {
@@ -1070,10 +902,6 @@ hr {
 
   .text-only__card-group {
     gap: 0 9.375rem;
-  }
-
-  .card-service__header {
-    /* vazio */
   }
 
   .insurence {
@@ -1110,37 +938,8 @@ hr {
   }
 }
 
-/* OK */
 /* B R E A K P O I N T - EXTRA LAGER min-width 1199.98px */
 @media screen and (min-width: 74.99875rem) {
-  .container {
-    /* vazio */
-  }
-
-  .header {
-    /* vazio */
-  }
-
-  .logo {
-    /* vazio */
-  }
-
-  .logo__img {
-    /* vazio */
-  }
-
-  .slogan {
-    /* vazio */
-  }
-
-  .slogan__img 
-  /* vazio */ {
-  }
-
-  .main {
-    /* vazio */
-  }
-
   /* XL - component Block image and content */
 
   .image-content {
@@ -1161,10 +960,6 @@ hr {
     grid-column: 7 / 13;
   }
 
-  .image-content__photo {
-    /* vazio */
-  }
-
   .image-content__content {
     grid-column: 7 / 13;
     grid-row: 1;
@@ -1179,17 +974,9 @@ hr {
     text-align: start;
   }
 
-  .image-content__title--reverse {
-    /* vazio */
-  }
-
   .image-content__body {
     padding-block: 2rem;
     padding-inline: 3.75rem clamp(3.125rem, calc(1rem + 3vw), 3.75rem);
-  }
-
-  .image-content__body--reverse {
-    /* padding-inline: 1rem 3.75rem; */
   }
 
   .image-content__text {
@@ -1197,14 +984,6 @@ hr {
   }
 
   /* XL - component Block text only */
-
-  .text-only {
-    /* vazio */
-  }
-
-  .text-only--reverse {
-    /* vazio */
-  }
 
   .text-only__header {
     grid-column: 2 / 4;
@@ -1277,14 +1056,6 @@ hr {
     max-inline-size: 16.875rem;
   }
 
-  .card-purpose__title {
-    /* vazio */
-  }
-
-  .card-purpose__body {
-    /* vazio */
-  }
-
   .card-purpose__text {
     font-size: 1.125rem;
   }
@@ -1299,10 +1070,6 @@ hr {
     align-items: start;
   }
 
-  .card-service__icon-wrapper {
-    /* vazio */
-  }
-
   .card-service__icon {
     margin-inline: 0;
   }
@@ -1312,49 +1079,10 @@ hr {
     text-align: start;
   }
 
-  .card-service__body {
-    /* vazio */
-  }
-
   .card-service__list-services {
     text-align: start;
     font-size: 1rem;
   }
-
-  .card-service__type {
-    /* vazio */
-  }
-
-  /* XL - Insurence */
-
-  /* .insurence {
-    flex-direction: row;
-    gap: 0 3.125rem;
-    justify-content: stretch;
-    padding: 2rem clamp(3.125rem, calc(1rem + 3vw), 3.75rem);
-  } */
-
-  .insurence__icon-wrapper {
-    /* vazio */
-  }
-
-  .insurence__icon {
-    /* vazio */
-  }
-
-  .insurence__icon-text {
-    /* vazio */
-  }
-
-  .insurence__body {
-    /* vazio */
-  }
-
-  /* .insurence__text {
-    inline-size: 100%;
-    max-inline-size: 68rem;
-    text-align: start;
-  } */
 
   .talk-counters {
     padding: 2rem 3.75rem;
@@ -1364,133 +1092,8 @@ hr {
     font-size: 1.875rem;
   }
 
-  .btn {
-    /* vazio */
-  }
-
-  .btn__icon-wrapper {
-    /* vazio */
-  }
-
-  .btn__icon {
-    /* vazio */
-  }
-
-  .btn__label {
-    /* vazio */
-  }
-
   .footer {
     padding-inline: clamp(3.125rem, calc(1rem + 3vw), 3.75rem);
-  }
-
-  .footer__content {
-    /* vazio */
-  }
-
-  /* .informations {
-    align-items: start;
-    flex-direction: row;
-    justify-content: space-between;
-    row-gap: 0;
-  } */
-
-  .contact-list {
-    /* vazio */
-  }
-
-  .contact-list__item {
-    /* text-align: start; */
-  }
-
-  .contact-list__link {
-    /* vazio */
-  }
-
-  .contact-list__email {
-    /* vazio */
-  }
-
-  /* .contact-list__link,
-  .contact-list__email {
-    justify-content: flex-start;
-  } */
-
-  .contact-list__icon {
-    /* vazio */
-  }
-
-  .company {
-    /* vazio */
-  }
-
-  .company__logo-wrapper {
-    /* vazio */
-  }
-
-  /* .company__logo {
-    margin-inline: 0;
-  }
-
-  .company__content {
-    text-align: start;
-  } */
-
-  .company__cnpj {
-    /* vazio */
-  }
-
-  .company__address {
-    /* vazio */
-  }
-
-  .credits {
-    /* vazio */
-  }
-
-  .credits__exacta {
-    /* vazio */
-  }
-
-  .credits__developer {
-    /* vazio */
-  }
-
-  .credits__developer-link {
-    /* vazio */
-  }
-
-  .modal {
-  }
-
-  .modal__overlayer {
-  }
-
-  .modal__content {
-  }
-
-  .modal__header {
-  }
-
-  .modal__title {
-  }
-
-  .modal__btn-closer {
-  }
-
-  .modal__body {
-  }
-
-  .talk-department__content {
-  }
-
-  .talk-departament__title {
-  }
-
-  .talk-departament__link {
-  }
-
-  .talk-departament__icon {
   }
 }
 
