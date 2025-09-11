@@ -31,7 +31,9 @@
       />
     </noscript>
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script type="module" src="./assets/js/interaction.js" defer></script>
+
     <meta
       name="description"
       content="Desde 2008, a Exacta Contabilidade Empresarial em Serra‑ES oferece soluções contábeis estratégicas para empresas nacionais e internacionais. Atendimento para MEI, Simples, Lucro Real e Comércio Exterior, além de ser especialista em benefícios fiscais estaduais como FUNDAP-ES, Compete-ES, Regime Especial de Alagoas, RIOLOG."
@@ -90,7 +92,7 @@
       </header>
 
       <main class="main">
-        <section class="image-content">
+        <section class="image-content" data-aos="fade-right" duration="1200" data-aos-delay="0">
           <picture class="image-content__image">
             <source
               srcset="./assets/img/exacta-serra-es-contadora-720px-1440w.webp"
@@ -191,7 +193,7 @@
           </div>
         </section>
 
-        <section class="text-only">
+        <section class="text-only" data-aos="fade-left" duration="1200" data-aos-delay="500">
           <div class="text-only__header">
             <h2 class="text-only__title">Nosso propósito</h2>
           </div>
@@ -249,7 +251,7 @@
           </div>
         </section>
 
-        <section class="text-only text-only--reverse">
+        <section class="text-only text-only--reverse" data-aos="fade-right" duration="1200" data-aos-delay="0">
           <div class="text-only__header text-only__header--reverse">
             <h2 class="text-only__title text-only__title--reverse">
               Nossos serviços
@@ -308,7 +310,6 @@
                 </div>
               </article>
             </div>
-
             <div class="text-only__card-group">
               <article class="card-service" aria-labelledby="management-title">
                 <div class="card-service__header">
@@ -375,7 +376,7 @@
           </div>
         </section>
 
-        <section class="image-content image-content--reverse">
+        <section class="image-content image-content--reverse" data-aos="fade-left" duration="1200" data-aos-delay="500">
           <picture class="image-content__image image-content__image--reverse">
             <source
               srcset="
@@ -510,6 +511,7 @@
             </div>
           </div>
         </section>
+
         <section class="insurence" aria-labelledby="insurence-title">
           <div class="insurence__icon-wrapper">
             <img
@@ -539,7 +541,8 @@
             </p>
           </div>
         </section>
-        <section class="talk-counters">
+
+        <section class="talk-counters" data-aos="fade-up" duration="800">
           <p class="talk-counters__text">
             Converse com as nossas contadoras especialistas e descubra como
             otimizar a gestão tributária da sua empresa.
@@ -637,7 +640,7 @@
                 <p class="company__cnpj">CNPJ 09.349.748/0001-79</p>
                 <address class="company__address">
                   Av. Eldes Scherrer Souza nº 2230 <br />
-                  Edifício Essencial Escritórios, Sala 501 <br />
+                  Ed. Essencial Escritórios, Sala 501 <br />
                   Colina de Laranjeiras - Serra <br />
                   Espírito Santo - CEP 29.167-080
                 </address>
@@ -646,7 +649,8 @@
           </div>
           <div class="credits">
             <p class="credits__exacta">
-              © 2008–<span class="credits__year">2025</span> Exacta Contabilidade Empresarial
+              © 2008–<span class="credits__year">2025</span> Exacta
+              Contabilidade Empresarial
             </p>
             <p class="credits__developer">
               Design e desenvolvimento por
@@ -663,15 +667,9 @@
           </div>
         </div>
       </footer>
-     
-      <!-- MODAL TALK COUNTERS -->
     </div>
-    <div
-      class="modal"
-      role="dialog"
-      aria-labelledby="title-modal"
-      hidden
-    >
+    <!-- MODAL TALK COUNTERS -->
+    <div class="modal" role="dialog" aria-labelledby="title-modal" hidden>
       <div class="modal__content">
         <div class="modal__header">
           <h2 class="modal__title" id="title-modal">
@@ -751,5 +749,14 @@
         </div>
       </div>
     </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        disable: function () {
+          return window.innerWidth < 768;
+        },
+      });
+    </script>
   </body>
 </html>

@@ -3,20 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="manifest" href="/assets/manifest.webmanifest" />
     <meta name="theme-color" content="#FF6600" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/assets/img/favicon-32x32.png"
+      href="./assets/img/favicon-32x32.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/assets/img/apple-touch-icon.png"
+      href="./assets/img/apple-touch-icon.png"
     />
     <link
       rel="preload"
@@ -30,10 +29,11 @@
         href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap"
       />
     </noscript>
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script type="module" src="./assets/js/interaction.js" defer></script>
-
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/aos.css">
+    <script src="./assets/js/aos.js" defer></script>
+    <script src="./assets/js/main.js" defer></script>    
+    <script src="./assets/js/interaction.js" defer></script>
     <meta
       name="description"
       content="Desde 2008, a Exacta Contabilidade Empresarial em Serra‑ES oferece soluções contábeis estratégicas para empresas nacionais e internacionais. Atendimento para MEI, Simples, Lucro Real e Comércio Exterior, além de ser especialista em benefícios fiscais estaduais como FUNDAP-ES, Compete-ES, Regime Especial de Alagoas, RIOLOG."
@@ -74,7 +74,7 @@
         <div class="logo">
           <img
             class="logo__img"
-            src="/assets/img/logo-exacta-contabilidade-empresarial-serra-es.svg"
+            src="./assets/img/logo-exacta-contabilidade-empresarial-serra-es.svg"
             alt="Logotipo da Exacta Contabilidade Empresarial de Serra-ES"
             width="362"
             height="104"
@@ -83,7 +83,7 @@
         <div class="slogan">
           <img
             class="slogan__img"
-            src="/assets/img/desde-2008-contabilizando-conquistas-exacta-serra-es.svg"
+            src="./assets/img/desde-2008-contabilizando-conquistas-exacta-serra-es.svg"
             alt="slogan: desde 2008 contabilizando conquistas"
             width="188"
             height="80"
@@ -316,7 +316,7 @@
                   <div class="card-service__icon-wrapper">
                     <img
                       class="card-service__icon"
-                      src="/assets/img/icone-gestao-contabil-exacta-serra-es.svg"
+                      src="./assets/img/icone-gestao-contabil-exacta-serra-es.svg"
                       width="66"
                       height="66"
                       aria-hidden="true"
@@ -691,11 +691,11 @@
               </h3>
               <a
                 class="link"
-                href="https://wa.me/5527998116694?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20de%20contabilidade."
+                href="https://wa.me/5527998145385?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20de%20contabilidade."
                 target="_blank"
                 rel="noopener"
                 aria-label="Falar pelo WhatsApp com Luciany Alves sobre departamento pessoal e paralegal"
-                title="WhatsApp 27 99811-6694"
+                title="WhatsApp 27 99814-5385"
               >
                 <div class="link__icon-wrapper">
                   <svg
@@ -721,11 +721,11 @@
               </h3>
               <a
                 class="link"
-                href="https://wa.me/5527998116694?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20de%20contabilidade."
+                href="https://wa.me/5527996528871?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20de%20contabilidade."
                 target="_blank"
                 rel="noopener"
                 aria-label="Falar pelo WhatsApp com Andréia Aguiar sobre departamento contábil e fiscal"
-                title="WhatsApp 27 99811-6694"
+                title="WhatsApp 27 99652-8871"
               >
                 <div class="link__icon-wrapper">
                   <svg
@@ -749,14 +749,5 @@
         </div>
       </div>
     </div>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        once: true,
-        disable: function () {
-          return window.innerWidth < 768;
-        },
-      });
-    </script>
   </body>
 </html>
