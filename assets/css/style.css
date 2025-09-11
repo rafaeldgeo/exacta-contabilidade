@@ -494,6 +494,8 @@ hr {
 
 .modal {
   align-items: center;
+  animation-duration: 0.8s;
+  animation-name: show-contact;
   background-color: var(--color-bg-modal);
   block-size: 100%;
   display: flex;
@@ -514,9 +516,18 @@ hr {
   background-color: var(--color-white);
   display: flex;
   flex-direction: column;
-  margin: 0.625rem;
   inline-size: 100%;
+  margin: 0.625rem;
   max-inline-size: 45rem;
+}
+
+@keyframes show-contact {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .modal__header {
@@ -632,6 +643,14 @@ hr {
 
   .contact-list__icon {
     display: none;
+  }
+
+  .credits__exacta {
+    font-size: 0.75rem;
+  }
+
+  .credits__developer {
+    font-size: 0.65rem;
   }
 }
 
@@ -821,22 +840,6 @@ hr {
     padding: 2rem 4rem;
   }
 
-  .insurence__icon-wrapper {
-    /* vazio */
-  }
-
-  .insurence__icon {
-    /* vazio */
-  }
-
-  .insurence__icon-text {
-    /* vazio */
-  }
-
-  .insurence__body {
-    /* vazio */
-  }
-
   .insurence__text {
     font-size: 1.125rem;
   }
@@ -849,22 +852,6 @@ hr {
 
   .talk-counters__text {
     font-size: 1.625rem;
-  }
-
-  .btn {
-    /* vazio */
-  }
-
-  .btn__icon-wrapper {
-    /* vazio */
-  }
-
-  .btn__icon {
-    /* vazio */
-  }
-
-  .btn__label {
-    /* vazio */
   }
 
   .footer {
