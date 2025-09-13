@@ -394,7 +394,7 @@ hr {
 
 .footer {
   background-color: var(--color-bg-footer);
-  padding-block: clamp(1.375rem, 5.6vw, 2rem) 0.7rem;
+  padding-block: clamp(1.375rem, 5.6vw, 2rem) 1rem;
   padding-inline: 1.375rem;
 }
 
