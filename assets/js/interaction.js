@@ -1,3 +1,9 @@
+/**
+ * Projeto: One Page Exacta Contabilidade Empresarial Serra-ES
+ * Design e Desenvolvimento: Rafael Dias de Almeida
+ * Ano: Setembro/2025
+ */
+
 "use strict";
 
 const html = document.querySelector("html");
@@ -62,7 +68,7 @@ function trapFocus(container) {
                 }
             }
         }
-    }, {once: true}); 
+    }); 
 }
 
 btnOpen.addEventListener("click", openModal);
@@ -76,7 +82,7 @@ divModal.addEventListener("click", (e) => {
 });
 
 // close the modal when push the Esc key
-addEventListener("keydown", (e) => {
+divModal.addEventListener("keydown", (e) => {
     if (!divModal.hidden && e.key === "Escape") {
         closeModal();
 
