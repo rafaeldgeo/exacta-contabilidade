@@ -1,13 +1,7 @@
-/* ==========================================================================
-   Projeto: One Page Exacta Contabilidade Empresarial Serra-ES
-   Design e Desenvolvimento: Rafael Dias de Almeida
-   Ano: Setembro/2025
-   ========================================================================== */
-
+/* Projeto: One Page Exacta Contabilidade Empresarial Serra-ES | Design e Desenvolvimento: Rafael Dias de Almeida |  Ano: Setembro/2025 */
 @charset "UTF-8";
 
 :root {
-  /* Paleta */
   --color-gray-100: #e6e6e6;
   --color-gray-700: #4d4d4d;
   --color-gray-apha: rgba(000, 000, 000, 0.8);
@@ -15,7 +9,6 @@
   --color-orange-700: #ff6600;
   --color-white: #ffffff;
 
-  /* Tokens de uso */
   --color-bg: var(--color-white);
   --color-bg-block-image-content--imagem: var(--color-orange-100);
   --color-bg-block-image-content--content: var(--color-white);
@@ -77,7 +70,6 @@ body {
 }
 
 /* M O B I L E  F I R S T  */
-
 .header {
   align-items: center;
   display: flex;
@@ -107,7 +99,6 @@ body {
 }
 
 /* MOBILE FIRST - component Block image and content */
-
 .image-content {
   display: grid;
   grid-template-columns: 1fr;
@@ -169,7 +160,6 @@ body {
 }
 
 /*  MOBILE FIRST - component Block text only */
-
 .text-only__header {
   background-color: var(--color-bg-title);
 }
@@ -217,7 +207,6 @@ body {
 }
 
 /*  MOBILE FIRST - card purpose */
-
 .card-purpose {
   color: var(--color-tx-dark);
   text-align: center;
@@ -248,7 +237,6 @@ hr {
 }
 
 /*  MOBILE FIRST - card service */
-
 .card-service {
   color: var(--color-tx-dark);
   inline-size: 100%;
@@ -288,7 +276,6 @@ hr {
 }
 
 /*  MOBILE FIRST - insurance */
-
 .insurance {
   align-items: center;
   background-color: var(--color-bg-insurance);
@@ -333,7 +320,6 @@ hr {
 }
 
 /*  MOBILE FIRST - Talk Counter */
-
 .talk-counters {
   align-items: center;
   background-color: var(--color-bg-speak-counters);
@@ -494,7 +480,6 @@ hr {
 }
 
 /* Modal */
-
 .modal {
   align-items: center;
   animation-duration: 0.4s;
@@ -725,7 +710,6 @@ hr {
   }
 
   /* MD - component Block image and content */
-
   .image-content {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(2, auto);
@@ -778,7 +762,6 @@ hr {
   }
 
   /* MD - component Block text only */
-
   .text-only {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -838,7 +821,6 @@ hr {
   }
 
   /* MD - card purpose */
-
   .card-purpose {
     text-align: start;
   }
@@ -851,8 +833,6 @@ hr {
     font-size: 1.125rem;
   }
 
-  /* MD - card service */
-
   .card-service {
     inline-size: 16rem;
   }
@@ -862,7 +842,6 @@ hr {
   }
 
   /* MD - insurance */
-
   .insurance {
     padding: 2rem 4rem;
   }
@@ -872,7 +851,6 @@ hr {
   }
 
   /* MD - Talk Counter */
-
   .talk-counters {
     padding: 2rem 4rem;
   }
@@ -955,7 +933,6 @@ hr {
 /* B R E A K P O I N T - EXTRA LAGER min-width 1199.98px */
 @media screen and (min-width: 74.99875rem) {
   /* XL - component Block image and content */
-
   .image-content {
     grid-template-rows: auto;
   }
@@ -998,7 +975,6 @@ hr {
   }
 
   /* XL - component Block text only */
-
   .text-only__header {
     grid-column: 2 / 4;
     grid-row: 1;
@@ -1065,7 +1041,6 @@ hr {
   }
 
   /* XL - card purpose */
-
   .card-purpose {
     max-inline-size: 16.875rem;
   }
@@ -1075,7 +1050,6 @@ hr {
   }
 
   /* XL - card service */
-
   .card-service {
     inline-size: 13.25rem;
   }

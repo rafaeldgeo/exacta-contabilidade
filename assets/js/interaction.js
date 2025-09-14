@@ -1,9 +1,4 @@
-/**
- * Projeto: One Page Exacta Contabilidade Empresarial Serra-ES
- * Design e Desenvolvimento: Rafael Dias de Almeida
- * Ano: Setembro/2025
- */
-
+/* Projeto: One Page Exacta Contabilidade Empresarial Serra-ES | Design e Desenvolvimento: Rafael Dias de Almeida |  Ano: Setembro/2025 */
 "use strict";
 
 const html = document.querySelector("html");
