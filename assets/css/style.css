@@ -8,9 +8,12 @@
   --color-orange-100: #fddec2;
   --color-orange-700: #ff6600;
   --color-white: #ffffff;
+  --color-blue: #2a5964;
+  --color-pink: #967C90;
 
   --color-bg: var(--color-white);
-  --color-bg-block-image-content--imagem: var(--color-orange-100);
+  --color-bg-block-image-content--imagem-1: var(--color-blue);
+  --color-bg-block-image-content--imagem-2: var(--color-pink);
   --color-bg-block-image-content--content: var(--color-white);
   --color-bg-block-text-only: var(--color-gray-100);
   --color-bg-insurance: var(--color-gray-100);
@@ -106,7 +109,11 @@ body {
 
 .image-content__image {
   aspect-ratio: 375 / 400;
-  background-color: var(--color-bg-block-image-content--imagem);
+  background-color: var(--color-bg-block-image-content--imagem-1);
+}
+
+.image-content__image--reverse {
+  background-color: var(--color-bg-block-image-content--imagem-2);
 }
 
 .image-content__image img {
@@ -720,7 +727,7 @@ hr {
   }
 
   .image-content__image {
-    aspect-ratio: 767 / 485;
+    aspect-ratio: 704 / 485;
     grid-column: 1 / 12;
   }
 
